@@ -283,23 +283,6 @@
 }
 
 
-[class*="MASON"] rect {
-    fill: #4F4F4E !important;
-}
-
-[class*="KARST"] rect {
-    fill: #4F4F4E !important;
-}
-
-
-[class*="BIGRED2"] rect {
-    fill: #4F4F4E !important;
-}
-
-[class*="QUARRY"] rect {
-    fill: #4F4F4E !important;
-}
-
 
 
 [class*="Chemical"] rect {

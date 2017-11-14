@@ -431,7 +431,12 @@ visualizationFunctions.Sankey = function(element, data, opts) {
         .attr("transform", function(d) {
             return "translate(" + d.x + "," + d.y + ")";
         })
-
+        .attr("fill", function(d){
+            if(sankey01.resource_map[d.name] == "COMPUTE")
+                return "#4F4F4E";
+            if(sankey01.resource_map[d.name] == "STORAGE")
+                return "#8E8E8E";
+        })
         .call(d3.behavior.drag()
           .origin(function(d) { return d; })
           .on("drag", dragmove))
