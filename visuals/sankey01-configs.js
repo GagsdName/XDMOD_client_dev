@@ -29,7 +29,7 @@ configs.sankey01 = {
             },
             "prettyMap": { 
                 'ResourceID':'IT Resources',
-                'ResourceUnitsUsed':'Resource Units Used',
+                'ResourceUnits':'Resource Units Used',
                 'GrantSource':'Funding',
                 'GrantID':'Grant ID',
                 'GrantSize':'Grant Size',
@@ -48,7 +48,7 @@ configs.sankey01 = {
                 'PubID',
                 'GrantSource',
                 'GrantID',
-                'ResourceUnitsUsed',
+                'ResourceUnits',
                 'AuthorID',
                 'PublicationTitle',
                 'Date',

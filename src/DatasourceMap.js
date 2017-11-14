@@ -25,7 +25,7 @@
         url: 'data/copiDataAsRecords.json'
     },
     sankeyData: {
-        url: 'data/sankey.json'
+        url: 'data/sankey-paper.json'
     }
 
 }
