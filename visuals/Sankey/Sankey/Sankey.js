@@ -489,29 +489,7 @@ context.SVG.nodes.append("text")
 }
 if(d.i == 1){
     var stats1=""
-     switch(d.name)
-        {
-            case "NIH-FDA":stats1 = context.filteredData.grant_sizes.NIHFDA;break;
-            case "NIH-NCCIH":stats1 = context.filteredData.grant_sizes.NIHNCCIH;break;
-            case "NIH-NCI":stats1 = context.filteredData.grant_sizes.NIHNCI;break;
-            case "NIH-NHLBI":stats1 = context.filteredData.grant_sizes.NIHNHLBI;break;
-            case "NIH-NIA": stats1 = context.filteredData.grant_sizes.NIHNIA;break;
-            case "NIH-NIAAA":stats1 = context.filteredData.grant_sizes.NIHNIAAA;break;
-            case "NIH-NIAID":stats1 = context.filteredData.grant_sizes.NIHNIAID;break;
-            case "NIH-NIGMS":stats1 = context.filteredData.grant_sizes.NIHNIGMS;break;
-            case "NIH-NIBIB":stats1 = context.filteredData.grant_sizes.NIHNIBIB;break;
-            case "NIH-NIAMS":stats1 = context.filteredData.grant_sizes.NIHNIAMS;break;
-            case "NIH-NIDA":stats1 = context.filteredData.grant_sizes.NIHNIDA;break;
-            case "NIH-NIMH":stats1 = context.filteredData.grant_sizes.NIHNIMH;break;
-            case "NIH-NICHD":stats1 = context.filteredData.grant_sizes.NIHNICHD;break;
-            case "NIH-NIDCD":stats1 = context.filteredData.grant_sizes.NIHNIDCD;break;
-            case "NIH-NIDDK":stats1 = context.filteredData.grant_sizes.NIHNIDDK;break;
-            case "NIH-NLM":stats1 = context.filteredData.grant_sizes.NIHNLM;break;
-            case "NIH-OD":stats1 = context.filteredData.grant_sizes.NIHOD;break;
-            case "NIH-ODCDC":stats1 = context.filteredData.grant_sizes.NIHODCDC;break;
-
-                 
-        }
+   stats1 = context.filteredData.resource_grant_totals[d.name];
     var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
     if (context.config.meta.labels.prettyMap[txt.trim()]) {
         return context.config.meta.labels.prettyMap[txt.trim()]+" ("+Utilities.formatValue["currency"](stats1,'$')+")";
@@ -524,7 +502,7 @@ else return txt+" ("+Utilities.formatValue["currency"](stats1,'$')+")";
 
 if(d.i == 2){
     var stats2=""
-    stats2 = context.filteredData.publication_numbers_discipline[d.Discipline] 
+    stats2 = context.filteredData.publication_numbers_discipline[d.name] 
     var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
     if (context.config.meta.labels.prettyMap[txt.trim()]) {
         return context.config.meta.labels.prettyMap[txt.trim()]+" (#Publications: "+Utilities.formatValue["number"](stats2)+")";
