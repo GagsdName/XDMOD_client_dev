@@ -489,7 +489,7 @@ context.SVG.nodes.append("text")
 }
 if(d.i == 1){
     var stats1=""
-   stats1 = context.filteredData.resource_grant_totals[d.name];
+   stats1 = context.filteredData.grant_sizes[d.name];
     var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
     if (context.config.meta.labels.prettyMap[txt.trim()]) {
         return context.config.meta.labels.prettyMap[txt.trim()]+" ("+Utilities.formatValue["currency"](stats1,'$')+")";
