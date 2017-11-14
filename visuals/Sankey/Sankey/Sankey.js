@@ -482,7 +482,8 @@ context.SVG.nodes.append("text")
         if ((txt.length>stringSizeLimit) && (d.i==2))
             {return txt.slice(0, stringSizeLimit)+"...";
     }
-    else return txt+" ("+Utilities.formatValue["number"](stats)+")";
+    else return txt;
+        // +" ("+Utilities.formatValue["number"](stats)+")";
 }
 if(d.i == 1){
     var stats1=""
