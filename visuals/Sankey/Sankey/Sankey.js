@@ -146,7 +146,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                 })
                 .attr("y", -12)
 
-                .text("Total Publications: "+context.filteredData.publication_disciplines.total)
+                .text("Total Publications: "+context.filteredData.publication_numbers_discipline.total)
 
                 .style("text-anchor","mid")
                 .style("font-size",14)
