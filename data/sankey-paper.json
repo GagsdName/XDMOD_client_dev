@@ -12099,17 +12099,20 @@
 		"total": 19514146.0
 	},
 	"publication_numbers_discipline": {
-		"Brain Research": 16,
-		"Infectious Diseases": 6,
-		"Biotechnology": 6,
-		"Other": 21,
-		"Multidisciplinary": 4,
-		"Medical Specialties": 11,
-		"Chemistry": 4,
-		"Health Professionals": 5,
-		"Social Sciences": 2,
-		"Biology": 1,
-		"total": 76
+		"Brain Research": 54,
+		"Infectious Diseases": 62,
+		"Biotechnology": 32,
+		"Other": 202,
+		"Multidisciplinary": 14,
+		"Medical Specialties": 103,
+		"Chemistry": 30,
+		"Health Professionals": 35,
+		"Social Sciences": 6,
+		"Biology": 15,
+    "Chemical, Mechanical, & Civil Engineering":5,
+    "Electrical Engineering & Computer Science":1,
+    "Math & Physics":5,
+		"total": 564
 	},
 	"resource_unit_totals": {
 		"KARST": 664780020,
