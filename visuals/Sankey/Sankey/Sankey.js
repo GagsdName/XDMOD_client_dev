@@ -126,7 +126,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                 })
                 .attr("y", -12)
 
-                .text("Total : "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
+                .text("Total: "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
 
                 .style("text-anchor","mid")
                 .style("font-size",14)
