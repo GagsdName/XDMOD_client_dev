@@ -477,12 +477,12 @@ context.SVG.nodes.append("text")
        stats = context.filteredData.resource_users[name];
         var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
         if (context.config.meta.labels.prettyMap[txt.trim()]) {
-            return context.config.meta.labels.prettyMap[txt.trim()]+" (#Users: "+Utilities.formatValue["number"](stats)+")";
+            return context.config.meta.labels.prettyMap[txt.trim()]+" (Users: "+Utilities.formatValue["number"](stats)+")";
         }
         if ((txt.length>stringSizeLimit) && (d.i==2))
             {return txt.slice(0, stringSizeLimit)+"...";
     }
-    else return txt+" (#"+Utilities.formatValue["number"](stats)+")";
+    else return txt+" ("+Utilities.formatValue["number"](stats)+")";
 }
 if(d.i == 1){
     var stats1=""
@@ -502,7 +502,7 @@ if(d.i == 2){
     stats2 = context.filteredData.publication_numbers_discipline[d.name] 
     var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
     if (context.config.meta.labels.prettyMap[txt.trim()]) {
-        return context.config.meta.labels.prettyMap[txt.trim()]+" (#Publications: "+Utilities.formatValue["number"](stats2)+")";
+        return context.config.meta.labels.prettyMap[txt.trim()]+" (Publications: "+Utilities.formatValue["number"](stats2)+")";
     }
     
  return txt+" ("+Utilities.formatValue["number"](stats2)+")";
@@ -534,7 +534,7 @@ function createToolTips() {
             target = target
         }
         var val = source + " to " +
-        target + "\n" + "#"+ Utilities.formatValue["number"](d.value);
+        target + "\n" + ""+ Utilities.formatValue["number"](d.value);
         return val.replaceAll("|", "").replaceAll("dotdot", ".").trim();
     });
     context.SVG.nodes.append("title")
@@ -547,7 +547,7 @@ function createToolTips() {
             name = name
         }
 
-        var val1 = name + "\n" + "#" + Utilities.formatValue[""](d.value);
+        var val1 = name + "\n" + "" + Utilities.formatValue[""](d.value);
         var val2 = val1.replaceAll("|", "").replaceAll("dotdot", ".").trim();
         return val2;
     });
