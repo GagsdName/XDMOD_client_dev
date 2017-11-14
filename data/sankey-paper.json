@@ -12103,18 +12103,18 @@
 	"publication_numbers_discipline": {
 		"Brain Research": 54,
 		"Infectious Diseases": 62,
-		"Biotechnology": 32,
-		"Unclassified": 202,
+		"Biotechnology": 33,
+		"Unclassified": 201,
 		"Multidisciplinary": 14,
 		"Medical Specialties": 103,
 		"Chemistry": 30,
 		"Health Professionals": 35,
 		"Social Sciences": 6,
-		"Biology": 15,
+		"Biology": 14,
     "Chemical, Mechanical, & Civil Engineering":5,
     "Electrical Engineering & Computer Science":1,
-    "Math & Physics":5,
-		"total": 564
+    "Math & Physics":7,
+		"total": 565
 	},
 	"resource_unit_totals": {
 		"KARST": 664780020,
