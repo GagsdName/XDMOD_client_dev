@@ -464,12 +464,12 @@ context.SVG.nodes.append("rect")
                 return "#8E8E8E";
         }
         if(d.i==1){
-            if(d.name.indexOf("NSF")!=0)
+            if(d.name.indexOf("NSF")>=0)
                 return "#6BAED6";
             else return "#99000D";
         }
         })
- 
+
 context.SVG.nodes.append("text")
 .attr("x", -6)
 .attr("y", function(d) {
