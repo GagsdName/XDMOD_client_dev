@@ -68,5 +68,8 @@ configs.sankey01 = {
               }
           })
        })
-      
+       ntwrk.resource_map = {};
+      ntwrk.filteredData.resource_type_map.forEach(function(d,i){
+        ntwrk.resource_map[d.ResourceID] = d.ResourceType;
+      })
    }
