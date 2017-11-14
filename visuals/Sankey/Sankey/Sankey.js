@@ -432,10 +432,17 @@ visualizationFunctions.Sankey = function(element, data, opts) {
             return "translate(" + d.x + "," + d.y + ")";
         })
         .attr("fill", function(d){
+            if (d.i == 0){
             if(sankey01.resource_map[d.name] == "COMPUTE")
                 return "#4F4F4E";
             if(sankey01.resource_map[d.name] == "STORAGE")
                 return "#8E8E8E";
+        }
+        if(d.i==1){
+            if(d.name.indexOf("NSF")!=0)
+                return "#6BAED6";
+            else return "#99000D";
+        }
         })
         .call(d3.behavior.drag()
           .origin(function(d) { return d; })
