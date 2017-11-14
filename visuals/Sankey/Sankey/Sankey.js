@@ -107,7 +107,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                     return currNodeData.x + context.config.meta.nodes.styleEncoding.size.value / 2
                 })
                 .attr("y", -12)
-                .text("Total Funding: "+Utilities.formatValue["currency"](context.filteredData.grant_total,'$'))
+                .text("Total Funding: "+Utilities.formatValue["currency"](context.filteredData.grant_sizes.total,'$'))
                 .style("text-anchor","mid")
                 .style("font-size",14)
             }
@@ -126,7 +126,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                 })
                 .attr("y", -12)
 
-                .text("Total # Times Used: "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
+                .text("Total : "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
 
                 .style("text-anchor","mid")
                 .style("font-size",14)
@@ -469,15 +469,7 @@ context.SVG.nodes.append("text")
     var stats=""
     if(d.i == 0){
         name = d.name.replace(/\s/g, '').toUpperCase()
-        switch(name)
-        {
-            case "BIGREDII":stats = context.filteredData.resource_users.BIGREDII;break;
-            case "QUARRY": stats = context.filteredData.resource_users.QUARRY;break;
-            case "MASON":stats = context.filteredData.resource_users.MASON;break;
-            case "KARST":stats = context.filteredData.resource_users.KARST;break;
-
-        }
-
+       stats = context.filteredData.resource_users[name];
         var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
         if (context.config.meta.labels.prettyMap[txt.trim()]) {
             return context.config.meta.labels.prettyMap[txt.trim()]+" (#Users: "+Utilities.formatValue["number"](stats)+")";
