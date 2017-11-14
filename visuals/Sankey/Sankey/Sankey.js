@@ -524,24 +524,7 @@ else return txt+" ("+Utilities.formatValue["currency"](stats1,'$')+")";
 
 if(d.i == 2){
     var stats2=""
-     switch(d.name)
-        {
-            case "Other":stats2 = context.filteredData.publication_disciplines.Other;break; 
-            case "Infectious Diseases":stats2 = context.filteredData.publication_disciplines.InfectiousDiseases;break;
-            case "Brain Research":stats2 = context.filteredData.publication_disciplines.BrainResearch;break;
-            case "Biotechnology":stats2 = context.filteredData.publication_disciplines.Biotechnology;break;
-            case "Biology":stats2 = context.filteredData.publication_disciplines.Biology;break;
-            case "Medical Specialties":stats2 = context.filteredData.publication_disciplines.MedicalSpecialties;break;
-            case "Social Sciences":stats2 = context.filteredData.publication_disciplines.SocialSciences;break;
-            case "Chemistry":stats2 = context.filteredData.publication_disciplines.Chemistry;break;
-            case "Social Sciences":stats2 = context.filteredData.publication_disciplines.SocialSciences;break;
-            case "Health Professionals":stats2 = context.filteredData.publication_disciplines.HealthProfessionals;break;
-            case "Electrical Engineering & Computer Science":stats2 = context.filteredData.publication_disciplines.ElectricalEngineeringComputerScience;break;
-            case "Chemical, Mechanical, & Civil Engineering":stats2 = context.filteredData.publication_disciplines.ChemicalMechanicalCivilEngineering;break;
-            
-
-                 
-        }
+    stats2 = context.filteredData.publication_numbers_discipline[d.Discipline] 
     var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
     if (context.config.meta.labels.prettyMap[txt.trim()]) {
         return context.config.meta.labels.prettyMap[txt.trim()]+" (#Publications: "+Utilities.formatValue["number"](stats2)+")";
