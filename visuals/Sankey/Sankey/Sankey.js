@@ -459,13 +459,13 @@ context.SVG.nodes.append("rect")
  .attr("fill", function(d){
             if (d.i == 0){
             if(sankey01.resource_map[d.name] == "COMPUTE")
-                return "#4F4F4E";
+                return "#efe986";
             if(sankey01.resource_map[d.name] == "STORAGE")
-                return "#8E8E8E";
+                return "#0eb49b";
         }
         if(d.i==1){
             if(d.name.indexOf("NSF")>=0)
-                return "#6BAED6";
+                return "#00559b";
             else return "#99000D";
         }
         })
