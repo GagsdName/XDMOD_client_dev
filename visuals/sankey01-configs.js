@@ -72,4 +72,12 @@ configs.sankey01 = {
       ntwrk.filteredData.resource_type_map.forEach(function(d,i){
         ntwrk.resource_map[d.ResourceID] = d.ResourceType;
       })
+
+
+          ntwrk.nestedFunding = d3.nest()
+      .key(function(d) { return d.GrantSource; })
+     .key(function(d) { return d.GrantID; })
+
+        .entries(ntwrk.filteredData.records.data);
+           
    }

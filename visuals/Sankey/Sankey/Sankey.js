@@ -557,11 +557,11 @@ function createToolTips() {
         }
         if(d.i==1)
         {
-            return "Stats in Progress";   
+            return "# of Unique Grant IDs: "+ntwrk.nestedFunding[d.name].values.length;   
         }
         if(d.i==2)
         {
-            return Utilities.formatValue["number"](context.filteredData.publication_numbers_discipline[d.name]);
+            return "# of publications: "+Utilities.formatValue["number"](context.filteredData.publication_numbers_discipline[d.name]);
         }
       /*  var name = d.name.replaceAll("|", "").replaceAll("dotdot", ".").trim();
         if (context.config.meta.labels.prettyMap[name]) {
