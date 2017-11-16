@@ -126,7 +126,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                 })
                 .attr("y", -12)
 
-                .text("Total: "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
+                .text("Total Users: "+Utilities.formatValue["number"](context.filteredData.resource_users.total))
 
                 .style("text-anchor","mid")
                 .style("font-size",14)
@@ -491,7 +491,7 @@ context.SVG.nodes.append("text")
             {return txt.slice(0, stringSizeLimit)+"...";
     }
     else return txt;
-        // +" ("+Utilities.formatValue["number"](stats)+")";
+         +" ("+Utilities.formatValue["number"](stats)+")";
 }
 if(d.i == 1){
     var stats1=""
