@@ -557,7 +557,7 @@ function createToolTips() {
         }
         if(d.i==1)
         {
-            return "# of Unique Grant IDs: "+ntwrk.nestedFunding[d.name].values.length;   
+            return "# of Unique Grant IDs: "+context.nestedFunding[d.name].values.length;   
         }
         if(d.i==2)
         {
