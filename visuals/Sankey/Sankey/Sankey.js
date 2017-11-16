@@ -553,7 +553,7 @@ function createToolTips() {
             if(sankey01.resource_map[d.name] == "COMPUTE")
                 return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" CPU Units";
             if(sankey01.resource_map[d.name] == "STORAGE")
-                return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" GB";
+                return Utilities.formatValue["storageData"](context.filteredData.resource_unit_totals[d.name])+" GB";
         }
         if(d.i==1)
         {
