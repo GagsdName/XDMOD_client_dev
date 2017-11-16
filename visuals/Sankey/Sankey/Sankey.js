@@ -548,7 +548,22 @@ function createToolTips() {
     context.SVG.nodes.append("title")
     .attr("class", "tooltip")
     .text(function(d) {
-        var name = d.name.replaceAll("|", "").replaceAll("dotdot", ".").trim();
+        if(d.i==0)
+        {
+            if(sankey01.resource_map[d.name] == "COMPUTE")
+                return context.filteredData.resource_unit_totals[d.name]+"CPU Units";
+            if(sankey01.resource_map[d.name] == "STORAGE")
+                return context.filteredData.resource_unit_totals[d.name]+"GB";
+        }
+        if(d.i==1)
+        {
+            return "Stats in Progress";   
+        }
+        if(d.i==2)
+        {
+            return context.filteredData.publication_numbers_discipline[d.name];
+        }
+      /*  var name = d.name.replaceAll("|", "").replaceAll("dotdot", ".").trim();
         if (context.config.meta.labels.prettyMap[name]) {
             name = context.config.meta.labels.prettyMap[name]
         } else {
@@ -557,7 +572,7 @@ function createToolTips() {
 
         var val1 = name + "\n" + "" + Utilities.formatValue[""](d.value);
         var val2 = val1.replaceAll("|", "").replaceAll("dotdot", ".").trim();
-        return val2;
+        return val2;*/
     });
     return context.SVG.selectAll(".tooltip")
 }
