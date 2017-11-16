@@ -551,9 +551,9 @@ function createToolTips() {
         if(d.i==0)
         {
             if(sankey01.resource_map[d.name] == "COMPUTE")
-                return context.filteredData.resource_unit_totals[d.name]+"CPU Units";
+                return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" CPU Units";
             if(sankey01.resource_map[d.name] == "STORAGE")
-                return context.filteredData.resource_unit_totals[d.name]+"GB";
+                return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" GB";
         }
         if(d.i==1)
         {
@@ -561,7 +561,7 @@ function createToolTips() {
         }
         if(d.i==2)
         {
-            return context.filteredData.publication_numbers_discipline[d.name];
+            return Utilities.formatValue["number"](context.filteredData.publication_numbers_discipline[d.name]);
         }
       /*  var name = d.name.replaceAll("|", "").replaceAll("dotdot", ".").trim();
         if (context.config.meta.labels.prettyMap[name]) {
