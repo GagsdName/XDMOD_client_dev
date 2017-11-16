@@ -557,7 +557,7 @@ function createToolTips() {
         }
         if(d.i==1)
         {
-            return "# of Unique Grant IDs: "+context.uniqueGrants[d.name];   
+            return "# of Unique Grants: "+context.uniqueGrants[d.name];   
         }
         if(d.i==2)
         {
