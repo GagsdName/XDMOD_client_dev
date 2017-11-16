@@ -80,4 +80,8 @@ configs.sankey01 = {
 
         .entries(ntwrk.filteredData.records.data);
            
+             ntwrk.uniqueGrants = {};
+      ntwrk.nestedFunding.forEach(function(d,i){
+        ntwrk.uniqueGrants[d.key] = d.values.length;
+      })
    }
