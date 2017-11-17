@@ -551,7 +551,7 @@ function createToolTips() {
         if(d.i==0)
         {
             if(sankey01.resource_map[d.name] == "COMPUTE")
-                return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" CPU Units";
+                return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" CPU Hours";
             if(sankey01.resource_map[d.name] == "STORAGE")
                 return Utilities.formatValue["number"](context.filteredData.resource_unit_totals[d.name])+" GB";
         }
