@@ -79,11 +79,12 @@ configs.sankey01 = {
      .key(function(d) { return d.GrantID; })
 
         .entries(ntwrk.filteredData.records.data);
-         totalGrants = 0;  
+         ntwrk.totalGrants = 0;  
              ntwrk.uniqueGrants = {};
       ntwrk.nestedFunding.forEach(function(d,i){
         ntwrk.uniqueGrants[d.key] = d.values.length;
-        totalGrants+= ntwrk.uniqueGrants[d.key];
-        console.log("Total Grants", totalGrants);
+        ntwrk.totalGrants+= ntwrk.uniqueGrants[d.key];
+
       })
+      console.log("Total Grants", ntwrk.totalGrants);
    }
