@@ -292,7 +292,7 @@ var Utilities = {
                 if (amount < 0) {
                     currencySign = "-" + currencySign;
                 }
-                amt = Math.abs(amount);
+                amt = amount;
 
                 if (amt < 1000) {
                     return sign + amt;
