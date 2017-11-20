@@ -557,11 +557,11 @@ function createToolTips() {
         }
         if(d.i==1)
         {
-            return "# of Unique Grants: "+context.uniqueGrants[d.name];   
+            return "#Grants: "+context.uniqueGrants[d.name];   
         }
         if(d.i==2)
         {
-            return "# of publications: "+Utilities.formatValue["number"](context.filteredData.publication_numbers_discipline[d.name]);
+            return "#Publications: "+Utilities.formatValue["number"](context.filteredData.publication_numbers_discipline[d.name]);
         }
       /*  var name = d.name.replaceAll("|", "").replaceAll("dotdot", ".").trim();
         if (context.config.meta.labels.prettyMap[name]) {
