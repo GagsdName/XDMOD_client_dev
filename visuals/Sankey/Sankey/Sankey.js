@@ -94,7 +94,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                 }
                 return d;
             })
-            if(textNode.text()=="Funding"){
+            if(textNode.text()=="Funding Type"){
                 textNode
                 .append("tspan")
                 .attr("x", function() {
