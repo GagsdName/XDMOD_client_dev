@@ -107,7 +107,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                     return currNodeData.x + context.config.meta.nodes.styleEncoding.size.value / 2
                 })
                 .attr("y", -12)
-                .text(context.totalGrants+" grants at "+Utilities.formatValue["currency"](context.filteredData.grant_sizes.total,'$'))
+                .text(context.totalGrants+" grants|Total:"+Utilities.formatValue["currency"](context.filteredData.grant_sizes.total,'$'))
                 .style("text-anchor","mid")
                 .style("font-size",14)
             }
