@@ -1,3 +1,5 @@
+{
+	"topology":"graph",
 	"edges": {
 		"schema": [{
 			"name": "source",
