@@ -107,7 +107,7 @@ visualizationFunctions.Sankey = function(element, data, opts) {
                     return currNodeData.x + context.config.meta.nodes.styleEncoding.size.value / 2
                 })
                 .attr("y", -12)
-                .text(context.totalGrants+" grants|Total:"+Utilities.formatValue["currency"](context.filteredData.grant_sizes.total,'$'))
+                .text(context.totalGrants+" grants | Total: "+Utilities.formatValue["currency"](context.filteredData.grant_sizes.total,'$'))
                 .style("text-anchor","mid")
                 .style("font-size",14)
             }
@@ -481,8 +481,8 @@ context.SVG.nodes.append("text")
 .text(function(d) {
     var stats=""
     if(d.i == 0){
-        name = d.name.replace(/\s/g, '').toUpperCase()
-       stats = context.filteredData.resource_users[name];
+        /*name = d.name.replace(/\s/g, '').toUpperCase()*/
+       stats = context.filteredData.resource_users[d.name];
         var txt = d.name.replaceAll("|", "").replaceAll("dotdot", ".");
         if (context.config.meta.labels.prettyMap[txt.trim()]) {
             return context.config.meta.labels.prettyMap[txt.trim()]+" (Users: "+Utilities.formatValue["number"](stats)+")";
