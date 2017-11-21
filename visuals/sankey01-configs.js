@@ -59,12 +59,12 @@ configs.sankey01 = {
         dataprep.sankey01 = function(ntwrk) {
 
          str = JSON.stringify(ntwrk.filteredData.publication_numbers_discipline);
-         str = str.replace("Electrical Engineering & Computer Science", "E.E. & Computer Science");
+         str = str.replace("Electrical Engineering & Computer Science", "EE & Computer Science");
          ntwrk.filteredData.publication_numbers_discipline = JSON.parse(str);
 
          ntwrk.filteredData.records.data.forEach(function(d, i) {
           if(d.Discipline=="Electrical Engineering & Computer Science")
-            d.Discipline = "E.E. & Computer Science";
+            d.Discipline = "EE & Computer Science";
 
            Object.keys(d).forEach(function(d1, i1) {
              d[d1] = d[d1].toString();
