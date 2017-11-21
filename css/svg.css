@@ -319,3 +319,6 @@
 [class*="Unclassified"] rect {
     fill: #8E8E8E !important;
 }
+[class*="Earth Sciences"] rect {
+    fill: #9B180F !important;
+}
