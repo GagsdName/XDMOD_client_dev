@@ -19,7 +19,7 @@
         }
     },
     copiData: {
-        url: 'data/copi.json'
+        url: 'data/copi2.json'
     },
     copiForBG: {
         url: 'data/copiDataAsRecords.json'
